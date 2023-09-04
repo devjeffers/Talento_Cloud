@@ -1,0 +1,30 @@
+def calculadora(num1, num2, op):
+    calculo = 0
+    if (op == 1):
+        calculo = num1 + num2
+    elif (op == 2):
+        calculo = num1 - num2
+    elif (op == 3):
+        calculo = num1 * num2
+    elif (op == 4 and num2 != 0):
+        calculo = num1 / num2
+    return calculo
+
+CALCULADORA_DO_JEFFERS = """
+1. Soma
+2. Subtração
+3. Multiplicação
+4. Divisão
+0. Sair
+"""
+
+while (True):
+    op = int(input(f"""Selecione a operação: {CALCULADORA_DO_JEFFERS}""")) 
+    if (op == 0):
+        break
+    
+    num1 = int(input("Escreva o primeiro número e depois pressione a tecla enter: ")) 
+    num2 = int(input("Escreva o segundo número e depois pressione a tecla enter: ")) 
+
+    resultado = calculadora(num1, num2, op)
+    print("Resultado: ", resultado)
